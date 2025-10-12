@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 3 - Centered Card</title>
+    <style>
+        /* GLOBAL STYLES */
+        * {
+            /* Ensures padding/border don't increase element size */
+            box-sizing: border-box; 
+            background-color: transparent; 
+        }
+
+        /* BODY CENTERING (Centers the whole card on the screen) */
+        body {
+            margin: 0;
+            background-color: rgb(168, 231, 231); 
+            display: flex;
+            justify-content: center; 
+            align-items: center;     
+            min-height: 100vh;
+        }
+
+        /* CARD CONTAINER */
+        .card {
+            background-color: white;
+            /* Flexbox for vertical arrangement and bottom spacing */
+            display: flex; 
+            flex-direction: column;
+            
+            height: auto; 
+            min-height: 480px; 
+            border-radius: 12px;
+            width: 320px;
+            padding: 8px; 
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* IMAGE */
+        .jp {
+            border-radius: 12px;
+            width: 100%; 
+            height: auto; 
+            margin: 0 0 10px 0; 
+            display: block;
+        }
+
+        /* TAGS */
+        .tags-container {
+            padding: 0 0 10px 0; 
+            background-color: white;
+        }
+        .tags {
+            background-color: rgb(240, 240, 240);
+            border-radius: 9999px;
+            padding: 4px 10px; 
+            display: inline-block;
+            width: auto; 
+            border: none; 
+            margin-right: 8px; 
+            color: rgb(93, 163, 163);
+            font-size: 14px;
+        }
+
+        /* TITLE & LOREM TEXT */
+        .title, .lorem {
+            background-color: white;
+            text-align: left;
+            padding: 0 8px;
+        }
+        .title {
+            margin-top: 5px;
+            font-size: 20px;
+            font-weight: 700;
+            color: #111827;
+        }
+        .lorem {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #6b7280;
+        }
+
+        /* LINK CONTAINER (Centers button horizontally and pushes it to the bottom) */
+        .link-container {
+            background-color: white;
+            padding: 15px 0 10px 0;
+            margin-top: auto; /* Pushes element to the bottom of the card */
+            
+            /* KEY FIX: Set width and use margin: auto for horizontal centering */
+            width: 120px; 
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ANCHOR TAG (Pill-Shaped Button) */
+        .more {
+            /* Requested dimensions for the pill shape */
+            width: 120px; 
+            height: 50px; 
+            border-radius: 9999px; 
+            
+            /* Requested colors */
+            background-color: aqua; 
+            color: blue;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            
+            /* Centers text vertically and horizontally inside the button */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            transition: background-color 0.3s;
+        }
+        
+        .more:hover {
+            background-color: rgb(60, 224, 224);
+        }
+    </style>
+
+</head>
+
+<body> 
+    <div class="card">
+        <img src="micah-sammie-chaffin-6O6BZerihQw-unsplash.jpg" alt="Lago di Braies" class="jp">
+        
+        <div class="tags-container">
+            <span class="tags">Nature</span>
+            <span class="tags">Lake</span>
+        </div>
+
+        <div class="title">Lago di Braies</div>
